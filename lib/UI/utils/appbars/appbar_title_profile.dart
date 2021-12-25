@@ -21,6 +21,7 @@ class AppBarTitleProfile extends AppBarWidget{
       title,
       style: TextStyle(
         fontWeight: FontWeight.w700,
+        color: Colors.white,
         fontSize: Theme.of(context).textTheme.headline6!.fontSize!*0.8
       ),
     );
@@ -35,42 +36,36 @@ class AppBarTitleProfile extends AppBarWidget{
         child: Text(
           backText,
           style: TextStyle(
-              fontWeight: FontWeight.w900
+              fontWeight: FontWeight.w900,
+            color: Colors.white
           ),
         ),
       ).paddingRight(7),
-      InkWell(
+      GestureDetector(
         onTap: (){
           Navigator.pop(parentContext);
-          functionBack();
+          // functionBack();
         },
         child: CircleAvatar(
-          backgroundColor: colorIconBackOfAppBar.withOpacity(0.1),
-          child: const Icon(Icons.arrow_forward,color: colorIconBackOfAppBar,)
+          backgroundColor: Colors.white.withOpacity(0.1),
+          child: const Icon(Icons.arrow_forward,color: Colors.white,)
           ,
         ).paddingRight(10),
       ),
 
     ];
   }
-
   @override
   getLeading() {
-    return  Container(
+    return Container(
       margin: const EdgeInsets.only(left: 13),
-      decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          image: DecorationImage(
-              image: AssetImage(
-                baseOfPathMedia + 'profile${index+1}.png',
-
-              ),
-              fit: BoxFit.contain
-          )
+      child: Icon(
+        Icons.shopping_cart,
+        color: Colors.black.withOpacity(0.4),
       ),
     );
-
   }
+
 
 
 }

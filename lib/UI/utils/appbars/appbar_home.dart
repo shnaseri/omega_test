@@ -17,7 +17,7 @@ class AppBarHome extends AppBarWidget {
       Icon(
         Icons.menu,
         color: Colors.black.withOpacity(0.4),
-      ).paddingRight(30)
+      ).paddingLeft(10)
     ];
   }
 

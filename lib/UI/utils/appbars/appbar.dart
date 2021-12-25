@@ -15,7 +15,7 @@ abstract class AppBarWidget extends StatelessWidget with PreferredSizeWidget {
         .height;
 
     return AppBar(
-      toolbarHeight: height * 0.07,
+      toolbarHeight: height * 0.085,
       automaticallyImplyLeading: true,
       elevation: 0,
       title: getTitleWidget(),
@@ -35,7 +35,7 @@ abstract class AppBarWidget extends StatelessWidget with PreferredSizeWidget {
       Size.fromHeight(MediaQuery
           .of(parentContext)
           .size
-          .height * 0.07);
+          .height * 0.085);
 
   List<Widget>? getActions();
 

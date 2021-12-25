@@ -40,8 +40,13 @@ dependencies:
   flutter_bloc: ^7.0.0
   sleek_circular_slider: ^2.0.1
   shamsi_date: ^0.16.0
+  persistent_bottom_nav_bar: ^4.0.2
   intl: ^0.17.0
   flutter_image_slideshow: ^0.1.2
+  http: ^0.13.4
+  cached_network_image: ^3.0.0
+
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
