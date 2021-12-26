@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
 
-import '../../../constant/const_repository.dart';
 import 'appbar.dart';
 
 class AppBarHome extends AppBarWidget {
@@ -15,7 +14,7 @@ class AppBarHome extends AppBarWidget {
     // TODO: implement getActions
     return [
       Icon(
-        Icons.menu,
+        Icons.shopping_cart,
         color: Colors.black.withOpacity(0.4),
       ).paddingLeft(10)
     ];
@@ -26,7 +25,7 @@ class AppBarHome extends AppBarWidget {
     return Container(
       margin: EdgeInsets.only(left: 13),
       child: Icon(
-        Icons.shopping_cart,
+        Icons.menu,
         color: Colors.black.withOpacity(0.4),
       ),
     );

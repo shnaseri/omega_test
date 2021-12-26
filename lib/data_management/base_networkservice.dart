@@ -1,7 +1,6 @@
 import 'dart:convert' as convert;
 
 import 'package:http/http.dart' as http;
-import 'package:nb_utils/nb_utils.dart';
 
 Map<String, String> header = {
   'Accept': 'application/json',
@@ -41,6 +40,8 @@ class BaseNetworkService {
       }
       http.Response response = await http
           .get(Uri.parse(urlServer + url + urlOfBody), headers: header);
+      print(response.request?.url);
+      print(response.body);
       if (response.statusCode == 200) {
         String body = convert.utf8.decode(response.bodyBytes);
         var _jsonResponse = convert.jsonDecode(body);

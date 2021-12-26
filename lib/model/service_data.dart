@@ -1,22 +1,41 @@
+import 'package:hive/hive.dart';
+
+part 'service_data.g.dart';
+
+@HiveType(typeId: 0)
 class ServiceData {
+  @HiveField(0)
   int id;
+  @HiveField(1)
   int serviceId;
+  @HiveField(2)
   String name;
+  @HiveField(3)
   String code;
+  @HiveField(4)
   int price;
+  @HiveField(5)
   bool isDefault;
+  @HiveField(6)
   bool transportCostIncluded;
+  @HiveField(7)
   int qty;
+  @HiveField(8)
   int minQty;
+  @HiveField(9)
   int maxQty;
+  @HiveField(10)
   String description;
+  @HiveField(11)
   int contractorSharePercent;
+  @HiveField(12)
   int unitMeasureId;
+  @HiveField(13)
   String unitMeasureName;
+  @HiveField(14)
   int superContractorsId;
 
-  ServiceData(
-      this.id,
+  ServiceData(this.id,
       this.serviceId,
       this.name,
       this.code,

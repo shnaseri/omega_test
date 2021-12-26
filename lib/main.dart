@@ -1,23 +1,23 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:hive_flutter/hive_flutter.dart';
+import 'package:omega_test/model/service_data.dart';
 import 'package:responsive_framework/responsive_wrapper.dart';
 import 'package:responsive_framework/utils/scroll_behavior.dart';
 
 import 'logical/app_router.dart';
-
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: [
     SystemUiOverlay.bottom, //This line is used for showing the bottom bar
   ]);
-
-  runApp(
-      MyApp(
-        router: AppRouter(),
-      ) // Wrap your app
-  );
+  await Hive.initFlutter();
+  Hive.registerAdapter(ServiceDataAdapter());
+  runApp(MyApp(
+    router: AppRouter(),
+  ) // Wrap your app
+      );
 }
 
 class MyApp extends StatelessWidget {
